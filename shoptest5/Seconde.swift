@@ -1,5 +1,5 @@
 //
-//  First.swift
+//  Seconde.swift
 //  shoptest5
 //
 //  Created by NguyenHai on 11/29/16.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class First: UITableViewController {
-        
+class Seconde: UITableViewController {
+
+    var receiveString: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,9 +40,9 @@ class First: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
 
-        cell.textLabel?.text = "Test"
+        cell.textLabel?.text = receiveString
 
         return cell
     }
@@ -82,21 +83,14 @@ class First: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//        if segue.identifier == "show" {
-//            if let nextViewController = segue.destination as? Seconde{
-//                nextViewController.receiveString = "XYZ"
-//                nextViewController.navigationItem.leftItemsSupplementBackButton = true
-//                
-//            }
-//        }
-//    } 
-// 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

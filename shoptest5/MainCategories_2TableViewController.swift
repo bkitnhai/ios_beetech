@@ -1,15 +1,15 @@
 //
-//  First.swift
+//  MainCategories_2TableViewController.swift
 //  shoptest5
 //
-//  Created by NguyenHai on 11/29/16.
+//  Created by NguyenHai on 12/13/16.
 //  Copyright © 2016 NguyenHai. All rights reserved.
 //
 
 import UIKit
 
-class First: UITableViewController {
-        
+class MainCategories_2TableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,12 +38,30 @@ class First: UITableViewController {
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { 
 
-        cell.textLabel?.text = "Test"
-
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellView1", for: indexPath) as! cell1_branch2
+            //set the data here
+            cell.image1.image = UIImage(named:"iphone6.png")!
+            cell.label1.text = "cell 1"
+            return cell
+        }
+        else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellView2", for: indexPath) as! cell2_branch2
+//            //set the data here
+            cell.image2.image = UIImage(named:"iphone7lineup")!
+            cell.label1.text = "cell 2"
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellView3", for: indexPath) as! cell3_branch2
+            //set the data here
+            cell.image1.image = UIImage(named:"iphone6.png")!
+            cell.label1.text = "cell 1"
+            return cell
+        }
+ 
     }
     
 
@@ -82,21 +100,14 @@ class First: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//        if segue.identifier == "show" {
-//            if let nextViewController = segue.destination as? Seconde{
-//                nextViewController.receiveString = "XYZ"
-//                nextViewController.navigationItem.leftItemsSupplementBackButton = true
-//                
-//            }
-//        }
-//    } 
-// 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
